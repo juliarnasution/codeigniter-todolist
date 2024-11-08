@@ -5,6 +5,7 @@ class Todo extends CI_Controller {
         parent::__construct();
         if ($this->session->userdata('logged_in') != TRUE)  {
             redirect('auth/login');
+            // redirect ke halaman login
         }
         $this->load->model('todo_model');
     }
